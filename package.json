@@ -1,5 +1,5 @@
 {
-  "name": "@substrate-system/simple-aes",
+  "name": "@vanishing.page/simple-aes",
   "description": "An easy way to use symmetric keys in browsers or node",
   "type": "module",
   "version": "0.0.32",

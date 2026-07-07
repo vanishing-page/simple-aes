@@ -1,10 +1,10 @@
 # simple AES
-[![tests](https://img.shields.io/github/actions/workflow/status/substrate-system/simple-aes/nodejs.yml?style=flat-square)](https://github.com/substrate-system/simple-aes/actions/workflows/nodejs.yml)
+[![tests](https://img.shields.io/github/actions/workflow/status/vanishing-page/simple-aes/nodejs.yml?style=flat-square)](https://github.com/vanishing-page/simple-aes/actions/workflows/nodejs.yml)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
-[![types](https://img.shields.io/npm/types/@substrate-system/simple-aes?style=flat-square)](README.md)
+[![types](https://img.shields.io/npm/types/@vanishing.page/simple-aes?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/simple-aes?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/simple-aes)
-[![GZip size](https://flat.badgen.net/bundlephobia/minzip/@substrate-system/simple-aes)](https://bundlephobia.com/package/@substrate-system/simple-aes)
+[![install size](https://flat.badgen.net/packagephobia/install/@vanishing.page/simple-aes?cache-control=no-cache)](https://packagephobia.com/result?p=@vanishing.page/simple-aes)
+[![GZip size](https://flat.badgen.net/bundlephobia/minzip/@vanishing.page/simple-aes)](https://bundlephobia.com/package/@vanishing.page/simple-aes)
 [![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
 
 
@@ -24,8 +24,8 @@ for much of this code.
   * [Bundler](#bundler)
   * [pre-bundled](#pre-bundled)
 - [API](#api)
-  * [`@substrate-system/simple-aes`](#substrate-systemsimple-aes)
-  * [`@substrate-system/simple-aes/compat`](#substrate-systemsimple-aescompat)
+  * [`@vanishing.page/simple-aes`](#vanishingpagesimple-aes)
+  * [`@vanishing.page/simple-aes/compat`](#vanishingpagesimple-aescompat)
   * [`encryptMessage`](#encryptmessage)
   * [`decryptMessage`](#decryptmessage)
 
@@ -34,7 +34,7 @@ for much of this code.
 ## Install
 
 ```sh
-npm i -S @substrate-system/simple-aes
+npm i -S @vanishing.page/simple-aes
 ```
 
 ## Use
@@ -47,7 +47,7 @@ import {
     decryptMessage,
     encryptMessage,
     type Message
-} from '@substrate-system/simple-aes'
+} from '@vanishing.page/simple-aes'
 // } from '@substtrate-system/simple-aes/compat'  // for older browsers
 ```
 
@@ -57,8 +57,8 @@ This exposes pre-bundled & minified JS files.
 #### copy
 
 ```sh
-cp ./node_modules/@substrate-system/simple-aes/dist/compat.min.js ./public
-cp ./node_modules/@substrate-system/simple-aes/dist/index.min.js ./public/simple-aes.min.js
+cp ./node_modules/@vanishing.page/simple-aes/dist/compat.min.js ./public
+cp ./node_modules/@vanishing.page/simple-aes/dist/index.min.js ./public/simple-aes.min.js
 ```
 
 #### link
@@ -75,7 +75,7 @@ cp ./node_modules/@substrate-system/simple-aes/dist/index.min.js ./public/simple
 
 ## API
 
-### `@substrate-system/simple-aes`
+### `@vanishing.page/simple-aes`
 
 Use the `webcrypto` API.
 
@@ -84,10 +84,10 @@ import {
     decryptMessage,
     encryptMessage,
     type Message
-} from '@substrate-system/simple-aes'
+} from '@vanishing.page/simple-aes'
 ```
 
-### `@substrate-system/simple-aes/compat`
+### `@vanishing.page/simple-aes/compat`
 
 Use a user-land module,
 [@noble/ciphers](https://github.com/paulmillr/noble-ciphers). This will work
@@ -97,7 +97,7 @@ in browsers of all ages.
 import {
     encryptMessage,
     decryptMessage
-} from '@substrate-system/simple-aes/compat'
+} from '@vanishing.page/simple-aes/compat'
 ```
 
 ### `encryptMessage`
@@ -116,7 +116,7 @@ async function encryptMessage (
 
 #### encrypt example
 ```ts
-import { SymmKeyLength, encryptMessage } from '@substrate-system/simple-aes'
+import { SymmKeyLength, encryptMessage } from '@vanishing.page/simple-aes'
 
 const [encryptedMsg, { key }] = await encryptMessage({
     content: 'hello world'
@@ -145,8 +145,8 @@ async function decryptMessage (
 
 #### decrypt example
 ```js
-import { test } from '@substrate-system/tapzero'
-import { decryptMessage } from '@substrate-system/simple-aes'
+import { test } from '@vanishing.page/tapzero'
+import { decryptMessage } from '@vanishing.page/simple-aes'
 
 test('decrypt the message', async t => {
     const decrypted = await decryptMessage(message, key)
