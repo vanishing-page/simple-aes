@@ -48,7 +48,7 @@ import {
     encryptMessage,
     type Message
 } from '@vanishing.page/simple-aes'
-// } from '@substtrate-system/simple-aes/compat'  // for older browsers
+// } from '@vanishing.page/simple-aes/compat'  // for older browsers
 ```
 
 ### pre-bundled
